@@ -8,23 +8,37 @@ namespace ConsoleApp18
 {
     internal class Invoice
     {
-       public int account;
-       public string customer;
-       public string provider;
+       private string account;
+       private string customer;
+       private string provider;
         public string Article { get; set; }
         public int Quantity { get; set; }
         public Invoice()
         {
 
         }
-        public Invoice(int account, string customer, string provider)
+        public Invoice(string account, string customer, string provider)
         {
             this.account = account;
             this.customer = customer;
             this.provider = provider;
         }
-        public double CostCalculation ( bool needVat, double productValue, int Quantity)
-        {  
+        public double CostCalculation ( bool needVat)
+        {
+            double productValue;
+            
+            if (Article == "LapTop")
+            {
+                productValue = 1200;
+            }
+            else if (Article == "USB")
+            {
+                productValue = 12;
+            }
+            else
+            {
+                productValue = 30;
+            }
             double vat = productValue* 0.18;
             if (needVat == true)
             {
