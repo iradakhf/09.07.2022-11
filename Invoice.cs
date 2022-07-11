@@ -37,6 +37,7 @@ namespace ConsoleApp18
             }
             else
             {
+                Article = "SD Card";
                 productValue = 30;
             }
             double vat = productValue* 0.18;
@@ -46,6 +47,7 @@ namespace ConsoleApp18
             }
             else
             {
+                
                 productValue *= Quantity;
             }
             return productValue;

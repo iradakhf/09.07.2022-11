@@ -8,7 +8,9 @@ namespace ConsoleApp18
 
             Invoice invoice = new Invoice("1542", "Ird", "SuperMarket");
 
-            invoice.Article = "LapTop";
+            //invoice.Article = "LapTop";
+            //invoice.Article = "USB";
+            invoice.Article = "SD Card";
             //invoice.Article = "USB";
             //invoice.Article = "SD Card";
             invoice.Quantity = 2;
